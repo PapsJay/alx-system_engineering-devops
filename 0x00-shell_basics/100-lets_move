@@ -1,2 +1,2 @@
 #!/bin/bash
-cp *[A-Z]* /tmp/u
+mv -ap|gep '^[A-Z].*[^/]$' /tmp/u
