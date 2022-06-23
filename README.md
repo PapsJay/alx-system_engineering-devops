@@ -1,1 +1,1 @@
-This is an ALX project on the basics of shell scripting in linux
+Task 0 : Where am I?
