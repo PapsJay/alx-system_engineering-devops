@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
-# A script that prints "To infinity and beyond" indefinitely and
-# "I am invincible" when receiving a SIGTERM signal
-
-echo $$ > holbertonscript.pid
-sudo cp holbertonscript.pid /var/run
-while :
-do
-  echo "To infinity and beyond"
-  trap "echo Y U no love me?!" SIGINT
-  trap "echo I hate the kill command; sudo rm /var/run/holbertonscript.pid; exit" SIGTERM
-  trap "sudo rm /var/run/holbertonscript.pid; exit" SIGQUIT
-  sleep 2
+# Create a file and run things indefinitely until something happens
+touch holbertonscript.pid
+echo $$ > ./holbertonscript.pid
+sudo mv ./holbertonscript.pid /var/run/holbertonscript.pid
+var=1
+trap 'echo "I hate the kill command" &&
+      sudo rm "/var/run/holbertonscript.pid" &&
+      kill -s SIGKILL $$ ' SIGTERM
+while [ $var ]; do
+    trap 'echo "Y U no love me?!"' SIGINT
+    trap 'sudo rm "/var/run/holbertonscript.pid" && kill -s $$ SIGKILL' SIGQUIT
+    echo "To infinity and beyond"
+    sleep 2
 done
-
