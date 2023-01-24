@@ -1,0 +1,13 @@
+    What happens when you type https://www.google.com in your browser and press Enter. Requirements, your post must cover: DNS request TCP/IP Firewall HTTPS/SSL Load-balancer Web server Application server Database.
+
+When you type "https://www.google.com" into your browser and press enter, a series of events occur behind the scenes to bring the Google homepage to your screen.
+
+    First, your computer sends a DNS (Domain Name System) request to a DNS server. The DNS server is responsible for converting the human-friendly domain name (google.com) into an IP address that your computer can understand. Once your computer has the IP address, it can initiate a connection to the server.
+    The connection is established using the TCP/IP (Transmission Control Protocol/Internet Protocol) protocol. This protocol is responsible for ensuring that the data sent between your computer and the server is transmitted reliably and in the correct order.
+    Once the connection is established, any firewalls in place will be checked to ensure that your computer is allowed to communicate with the server. Firewalls are security systems that control incoming and outgoing network traffic based on predetermined security rules.
+    Next, the SSL (Secure Sockets Layer) or HTTPS (HTTP Secure) protocol is used to encrypt the data being sent between your computer and the server. This ensures that any sensitive information, such as passwords or credit card numbers, cannot be intercepted and read by hackers.
+    The load balancer will check the traffic and distribute the request to the appropriate web server. Web servers are responsible for handling the incoming HTTP requests and serving the appropriate files to the client.
+    The web server will then pass the request to the application server if necessary, the application server will process the request and may query a database to retrieve the necessary information. The database is a collection of data, such as user information, that is stored and organized in a way that can be easily accessed and updated.
+    Finally, the server sends the requested information back to your computer, which displays the Google homepage on your screen.
+
+In summary, when you type "https://www.google.com" into your browser and press enter, your computer sends a DNS request to convert the domain name into an IP address, establishes a connection using TCP/IP, passes through firewalls, establishes a secure connection using SSL/HTTPS, forwards the request to the appropriate web server, which may pass the request to an application server to retrieve data from a database, and sends the requested information back to your computer to be displayed on your screen.
